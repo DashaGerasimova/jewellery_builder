@@ -1,0 +1,74 @@
+
+* {
+	box-sizing: border-box;
+}
+
+canvas {
+	margin: 5px;
+	border:1px solid black;
+}
+
+select, input {
+	width: 100%;
+	height: inherit;
+	font-size: inherit;
+}
+
+.block {
+	background-color: #a8dcc4;
+	border: 3px solid black;
+	padding: 5px;
+}
+
+.row {
+	width: 100%;
+}
+
+.col-3 {
+	float: left;
+	width: 25%;
+
+}
+.col-6 {
+	float: left;
+	width: 50%;
+
+}
+
+#content {
+	width: 1024px;
+	height: 700px;
+	margin: auto;
+}
+
+#upperContent {
+	height: 450px;
+	font-size: 20pt;
+	font-family: Khula, sans-serif;
+}
+
+#rightContent, #leftContent {
+	padding: 5px;
+}
+
+#colorButtons button {
+	width: 20px;
+	height: 20px;
+}
+
+
+#elementButtons {
+	height: 188px;
+	overflow: auto;
+}
+#elementButtons button{
+    background:none;
+    border:none;
+    margin: none;
+    padding: none;
+    float: left;
+}
+#elementButtons button img{
+    height: 185px;
+}
+
