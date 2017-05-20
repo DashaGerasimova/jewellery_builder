@@ -113,6 +113,5 @@ document.querySelectorAll("#elementButtons #planeElement").forEach(function(el) 
 });
 
 document.querySelectorAll("#colorButtons button").forEach(function(el) {
-  el.style.backgroundColor = el.id;
   el.onclick = changeColor;
 });

@@ -5,7 +5,7 @@
 
 canvas {
 	margin: 5px;
-	border:1px solid black;
+	border:4px solid black;
 }
 
 select, input {
@@ -15,9 +15,8 @@ select, input {
 }
 
 .block {
-	background-color: #a8dcc4;
-	border: 3px solid black;
-	padding: 5px;
+	border: 4px solid black;
+	padding: 10px;
 }
 
 .row {
@@ -39,28 +38,53 @@ select, input {
 	width: 1024px;
 	height: 700px;
 	margin: auto;
+	font-size: 20pt;
+	font-family: Khula, sans-serif;
 }
 
 #upperContent {
 	height: 450px;
-	font-size: 20pt;
-	font-family: Khula, sans-serif;
+
 }
 
 #rightContent, #leftContent {
 	padding: 5px;
 }
+#colorButtons {
+	width:100%;
+}
+#colorButtons .row {
+border: 4px solid black;
+	height:110px;
+	background-image:url(images/pal.jpg);
+	background-size: 246px auto;
+	background-repeat: no-repeat;
+}
+#colorButtons #rowButtons {
+	margin-left:12px;
+	opacity: 0;
 
-#colorButtons button {
-	width: 20px;
-	height: 20px;
+}
+#colorButtons #rowButtons button {
+	
+	padding:none;
+	margin-bottom:3px;
+	width: 37px;
+	height: 37px;
 }
 
 
 #elementButtons {
 	height: 188px;
 	overflow: auto;
+	float:left;
 }
+#elementButtons #buttonsText {
+	height:175px;
+	float:left;
+	width: 250px;
+}
+
 #elementButtons button{
     background:none;
     border:none;
@@ -69,6 +93,6 @@ select, input {
     float: left;
 }
 #elementButtons button img{
-    height: 185px;
+    height: 175px;
 }
 
