@@ -75,12 +75,7 @@ function drawPin() {
 	canvas.add(group);
 	canvas.sendToBack(group);
 	canvas.bringForward(group);
-
 }
-
-
-
-
 
 function drawPlane() {
 	var plane = new fabric.Rect({
@@ -106,6 +101,16 @@ function changeColor() {
 
 	canvas.renderAll();
 }
+
+canvas.on('object:scaling', (e) => {
+	var o = e.target;
+	if (!o.strokeWidthUnscaled && o.strokeWidth) {
+  	o.strokeWidthUnscaled = o.strokeWidth;
+  }
+	if (o.strokeWidthUnscaled) {
+  	o.strokeWidth = o.strokeWidthUnscaled / o.scaleX;
+  }
+})
 
 document.querySelectorAll("#elementButtons #squareElement").forEach(function(el) {
   el.onclick = drawSquare;
