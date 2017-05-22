@@ -1,21 +1,15 @@
 
-var defaultOptions = {
-	left: 100,
-	top: 100,
-	fill: 'transparent',
-	stroke: 'black',
-	strokeWidth:10
-}
+var canvas = new fabric.Canvas('canvas');
 
 function drawSquare() {
 	var rect = new fabric.Rect({
-	  left: 100,
-	  top: 100,
-	  fill: 'transparent',
-	  width: 100,
-	  height: 100,
-	  stroke: 'black',
-	  strokeWidth:10
+	    left: 100,
+	    top: 100,
+	    fill: 'transparent',
+	    width: 100,
+	    height: 100,
+	    stroke: 'black',
+	    strokeWidth:10
 	});
 
 	canvas.add(rect);
@@ -39,45 +33,62 @@ function drawCircle() {
 
 function drawPin() {
 	var pin = new fabric.Rect({
-	  left: 100,
-	  top: 100,
-	  fill: 'black',
-	  width: 10,
-	  height: 100,
+	    left: 100,
+	    top: 100,
+	    fill: 'black',
+	    width: 10,
+	    height: 150,
 	});
 
 	var circ1 = new fabric.Circle({
 	    radius: 10,
 	    left: 95,
 		top: 95,
-		fill: 'black',
+		fill: 'black'
 	});
 
 	var circ2 = new fabric.Circle({
 	    radius: 10,
 	    left: 95,
-		top: 195,
-		fill: 'black',
+		top: 245,
+		fill: 'black'
 	});
 
 	var group = new fabric.Group([ circ1, circ2, pin ], {
-	  left: 150,
-	  top: 100,
-	  lockScalingX: true
+	    left: 150,
+	    top: 100,
+	    lockScalingX: true
 	});
+
+	group.setControlsVisibility({
+         mt: true, 
+         mb: true, 
+         ml: false, 
+         mr: false, 
+         bl: false,
+         br: false, 
+         tl: false, 
+         tr: false,
+         mtr: true, 
+    });
 
 	canvas.add(group);
 	canvas.sendToBack(group);
 	canvas.bringForward(group);
+
 }
+
+
+
+
 
 function drawPlane() {
 	var plane = new fabric.Rect({
-	  left: 100,
-	  top: 100,
-	  fill: 'black',
-	  width: 100,
-	  height: 100
+	    left: 100,
+	    top: 100,
+	    fill: 'black',
+	    width: 100,
+	    height: 100
 	});
 
 	canvas.add(plane);
