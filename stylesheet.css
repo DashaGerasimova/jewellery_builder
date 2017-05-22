@@ -1,7 +1,14 @@
 
 * {
 	box-sizing: border-box;
+	font-size: 23pt;
+	font-family: Custom, sans-serif;
 }
+
+@font-face {
+    font-family: Custom; /* Имя шрифта */
+    src: url(custom.otf); /* Путь к файлу со шрифтом */
+   }
 
 canvas {
 	margin: 5px;
@@ -13,6 +20,7 @@ select, input {
 	height: inherit;
 	font-size: inherit;
 }
+
 
 .block {
 	border: 4px solid black;
@@ -38,8 +46,6 @@ select, input {
 	width: 1024px;
 	height: 700px;
 	margin: auto;
-	font-size: 20pt;
-	font-family: Khula, sans-serif;
 }
 
 #upperContent {
